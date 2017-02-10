@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { jcenter() }
+
+ext {
+	neo4jVersion = '3.1.1'
+	junitVersion = '4.12'
+}
+
+dependencies {
+//	compile group: 'org.neo4j', name: 'neo4j', version: neo4jVersion
+	compile group: 'org.neo4j', name: 'neo4j-kernel', version: neo4jVersion
+	compile group: 'org.neo4j', name: 'neo4j-io', version: neo4jVersion
+	compile group: 'org.neo4j', name: 'neo4j-kernel', version: neo4jVersion, classifier: 'tests'
+	compile group: 'org.neo4j', name: 'neo4j-io', version: neo4jVersion, classifier: 'tests'
+	testCompile group: 'junit', name: 'junit', version: junitVersion
+}
