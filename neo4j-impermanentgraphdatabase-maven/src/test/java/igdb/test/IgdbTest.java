@@ -8,7 +8,9 @@ public class IgdbTest {
 
   @Test
   public void test1() throws Exception {
-    final GraphDatabaseService gds = new TestGraphDatabaseFactory().newImpermanentDatabase();
+    GraphDatabaseService gds = new TestGraphDatabaseFactory().newImpermanentDatabase();
+    // Transaction tx = gds.beginTx();
+    // gds.execute("MATCH (n) RETURN n");
   }
 
 }

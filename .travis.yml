@@ -2,4 +2,9 @@ language: java
 jdk:
   - oraclejdk8
 script:
+  - cd neo4j-impermanentgraphdatabase-gradle
   - ./gradlew test
+  - cd ..
+  - cd neo4j-impermanentgraphdatabase-maven
+  - mvn test
+  - cd ..
